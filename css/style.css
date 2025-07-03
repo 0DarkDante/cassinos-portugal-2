@@ -853,3 +853,206 @@ header img {
   height: 50px;
   width: auto;
 }
+
+/* form */
+
+.contact-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+}
+
+.contact-modal-content {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.contact-modal-content h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact-modal-content input,
+.contact-modal-content textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s;
+}
+
+.contact-modal-content input:focus,
+.contact-modal-content textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+  background-color: #fff;
+}
+
+.contact-modal-content textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.page-container p > strong {
+  display: block;
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.contact-modal-content button {
+  padding: 0.6rem 1.2rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-modal-content button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.contact-modal-content button[type="submit"]:hover {
+  background-color: #43a047;
+}
+
+.contact-modal-content button#close-modal {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.contact-modal-content button#close-modal:hover {
+  background-color: #d32f2f;
+}
+
+/* М’яка анімація появи */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* politics */
+
+.page-container {
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 1;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Декор градієнт */
+.page-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at top left, rgba(255, 215, 0, 0.08), transparent 60%);
+  opacity: 0.6;
+  border-radius: 16px;
+}
+
+/* Заголовок */
+.page-container h1 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 1s ease-out;
+}
+
+/* Абзаци */
+.page-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Підзаголовки всередині p */
+.page-container p strong {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+/* Посилання */
+.page-container a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.page-container a:hover {
+  color: #fff176;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптація */
+@media (max-width: 600px) {
+  .page-container {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .page-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .page-container p {
+    font-size: 1rem;
+  }
+
+  .page-container p strong {
+    font-size: 1.1rem;
+  }
+}

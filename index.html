@@ -20,6 +20,7 @@
   <div class="container_header">
     <!-- Меню навігації -->
     <nav class="desktopNav">
+      <a href="/index.html">Página inicial</a>
       <a href="/pagamentos.html">Pagamentos Rápidos</a>
       <a href="/avaliadas.html">Mais Bem Avaliadas</a>
       <a href="/verificados.html">Sites Verificados</a>
@@ -394,6 +395,26 @@
         <p>Tem mais de 18 anos?</p>
         <button id="btn-yes">Sim</button>
         <button id="btn-no">Não</button>
+      </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="contact-overlay">
+      <div class="contact-modal-content">
+        <h2>Contate-nos</h2>
+        <form id="contact-form">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Descrição:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Enviar</button>
+          <button type="button" id="close-modal">Fechar</button>
+        </form>
       </div>
     </div>
 
